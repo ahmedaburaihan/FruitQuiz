@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:alpha="0.8"
+    android:id="@+id/layout1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgtop"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/fruits"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="Fruit Quiz App"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Right Answer is"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:background="#ABEBAD"
+            android:textSize="18sp"
+            android:textColor="#292727"
+            android:padding="5dp"
+            android:id="@+id/txt_right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right Answer"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:textColor="#095F56"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:id="@+id/txt_right_ans"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:elevation="20dp"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_height="100dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="QUESTION"
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:id="@+id/question_txt"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:elevation="20dp"
+            app:cardCornerRadius="10dp"
+            android:layout_gravity="center"
+            android:layout_height="100dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:hint="Enter your Answer"
+                android:textSize="24sp"
+                android:layout_gravity="center"
+                android:id="@+id/answer_edt"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/correct_answer"
+            android:layout_weight="1"
+            android:background="@drawable/right"
+            android:padding="20dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wrong_answer"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/wrong"
+            android:padding="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="3"
+        android:background="#fff">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple1"
+            android:layout_margin="5dp"
+            android:src="@drawable/show"
+            android:clickable="true"
+            android:id="@+id/img_show"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/img_check"
+            android:layout_margin="5dp"
+            android:background="@drawable/ripple1"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:src="@drawable/check"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/ripple1"
+            android:clickable="true"
+            android:src="@drawable/change"
+            android:id="@+id/img_change"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
